@@ -1,8 +1,8 @@
 function App() {
   return (
-    <>
-      <h1>Abhaya</h1>
-    </>
+    <div>
+      <h1 className="head-text">Abhaya</h1>
+    </div>
   );
 }
 
