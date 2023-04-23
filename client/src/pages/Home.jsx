@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { snapshot, useSnapshot } from "valtio";
+import { useSnapshot } from "valtio";
 import state from "../store";
 
 import {
@@ -9,7 +9,7 @@ import {
   slideAnimation,
 } from "../config/motion";
 
-import CustomButton from "../components/CustomButton";
+import { CustomButton } from "../components";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -28,7 +28,7 @@ const Home = () => {
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className="head-text">
-                LET&#39;S <br className="lg:block hidden" /> DO IT !
+                LET&#39;S <br className="md:block hidden" /> DO IT !
               </h1>
             </motion.div>
             <motion.div
@@ -41,7 +41,12 @@ const Home = () => {
                 and define your own creative style
               </p>
 
-              <CustomButton />
+              <CustomButton
+                type="filled"
+                title="Customize It"
+                handleClick={() => (state.intro = false)}
+                customStyles="w-fit px-4 py-2.5 font-bold text-sm"
+              />
             </motion.div>
           </motion.div>
         </motion.section>
