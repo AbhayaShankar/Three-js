@@ -6,7 +6,7 @@ const state = proxy({
   intro: true,
 
   // Color
-  color: "#EFBD48",
+  color: "#0C7489",
 
   // Boolean value for if we are currently displaying logo on out tshrit or not
   isLogoTexture: true,
