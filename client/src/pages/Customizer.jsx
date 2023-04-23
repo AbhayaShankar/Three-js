@@ -44,10 +44,25 @@ const Customizer = () => {
           >
             <CustomButton
               type="filled"
-              customStyles={""}
+              customStyles="w-fit px-4 py-2.5 font-bold text-sm tracking-[1px]"
               title="Go Back"
               handleClick={() => (state.intro = true)}
             />
+          </motion.div>
+
+          <motion.div
+            className="filtertabs-container"
+            {...slideAnimation("up")}
+          >
+            {FilterTabs.map((tab) => (
+              <Tab
+                key={tab.name}
+                tab={tab}
+                isFilterTab
+                isActiveTab=""
+                handleClick={() => {}}
+              />
+            ))}
           </motion.div>
         </>
       )}
