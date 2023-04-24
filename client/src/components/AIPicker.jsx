@@ -18,9 +18,26 @@ const AIPicker = ({
       />
       <div className="flex flex-wrap gap-3">
         {geenratingImg ? (
-          <CustomButton type="filled" title="Asking AI..." />
+          <CustomButton
+            type="filled"
+            title="Asking AI..."
+            customStyles="text-[12px]"
+          />
         ) : (
-          <CustomButton />
+          <>
+            <CustomButton
+              type="outline"
+              title="AI Logo"
+              handleClick={() => handleSubmit("logo")}
+              customStyles="text-[12px]"
+            />
+            <CustomButton
+              type="filled"
+              title="AI Full"
+              handleClick={() => handleSubmit("full")}
+              customStyles="text-[12px]"
+            />
+          </>
         )}
       </div>
     </div>

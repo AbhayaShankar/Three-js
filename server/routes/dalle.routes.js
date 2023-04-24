@@ -28,6 +28,16 @@ router.route("/").post(async (req, res) => {
     });
 
     const image = response.data.data[0].b64_json;
+
+    // const decodedImage = Buffer.from(image, "base64");
+
+    // // Validate image data format using a library or built-in functions, e.g. image-size in this example
+    // const imageSize = require("image-size");
+    // const dimensions = imageSize(decodedImage);
+    // if (!dimensions || !dimensions.width || !dimensions.height) {
+    //   throw new Error("Invalid image data");
+    // }
+
     res.status(200).json({ photo: image });
   } catch (error) {
     console.error(error);
