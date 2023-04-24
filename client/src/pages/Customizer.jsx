@@ -43,7 +43,7 @@ const Customizer = () => {
       case "colorpicker":
         return <ColorPicker />;
       case "filepicker":
-        return <FilePicker file={file} setFile={setFile} />;
+        return <FilePicker file={file} setFile={setFile} readFile={readFile} />;
       case "aipicker":
         return <AIPicker />;
       default:
