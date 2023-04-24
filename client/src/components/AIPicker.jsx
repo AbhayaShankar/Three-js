@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import CustomButton from "./CustomButton";
 
 const AIPicker = ({
   prompt,
   setPrompt,
   geenratingImg,
+  // eslint-disable-next-line no-unused-vars
   setGeneratingImg,
   handleSubmit,
 }) => {
